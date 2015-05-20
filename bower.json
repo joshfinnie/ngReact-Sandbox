@@ -1,0 +1,22 @@
+{
+  "name": "ngReact-Sandbox",
+  "version": "1.0.0",
+  "homepage": "https://github.com/joshfinnie/ngReact-Sandbox",
+  "authors": [
+    "Josh Finnie <josh@jfin.us>"
+  ],
+  "description": "A Sandbox for testing ngReact.",
+  "main": "server.coffee",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "assets/library",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ngReact": "~0.1.5"
+  }
+}
