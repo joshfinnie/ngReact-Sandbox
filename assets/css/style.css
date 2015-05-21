@@ -1,0 +1,21 @@
+body {
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 40px 15px;
+}
+
+.starter-template h1 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.starter-template h2 {
+  margin-top: 50px;
+}
+
+.starter-template code {
+  font-size: 200%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
