@@ -5,6 +5,25 @@ app.controller('mainCtrl', function($scope) {
         firstName: 'Josh',
         lastName: 'Finnie'
     };
+    $scope.people = [{
+        firstName: 'Josh',
+        lastName: 'Finnie'
+    },{
+        firstName: 'Josh',
+        lastName: 'Finnie'
+    },{
+        firstName: 'Josh',
+        lastName: 'Finnie'
+    },{
+        firstName: 'Josh',
+        lastName: 'Finnie'
+    },{
+        firstName: 'Josh',
+        lastName: 'Finnie'
+    },{
+        firstName: 'Josh',
+        lastName: 'Finnie'
+    }]
 });
 
 var Hello = React.createClass({
@@ -14,14 +33,33 @@ var Hello = React.createClass({
     },
 
     render: function() {
-        return React.DOM.span(null,
-        'Hello ' + this.props.firstName + ' ' + this.props.lastName
+        return (
+            <div>
+                <span>{ this.prop.firstName }</span> <span>{ this.prop.lastName }</span>
+            </div>
         );
     }
 });
 
+var HelloList = React.createClass({
+    render: function() {
+        return (
+            <div>
+                { this.props.people.map(function(person) {
+                    return (<Hello firstName=person.firstName lastName=person.lastName />)
+                })}
+            </div>
+        );
+    }
+})
+
 app.value("Hello", Hello);
+app.value("HelloList", HelloList);
 
 app.directive('hello', function(reactDirective) {
     return reactDirective(Hello);
+});
+
+app.directive('hello-list', function(reactDirective) {
+    return reactDirective(HelloList);
 });

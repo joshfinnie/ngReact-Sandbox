@@ -15,7 +15,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body ng-app="app" ng-controller="mainCtrl as ctrl">
+  <body ng-app="app" ng-controller="mainCtrl">
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -51,6 +51,12 @@
             <input type="text" class="form-control" id="last-name" ng-model="person.lastName" placeholder="Enter Last Name">
           </div>
         </form>
+        <h3>Using ngRepeat</h3>
+        <div ng-repeat="person in people">
+          <react-component name="Hello" props="person"/> 
+        </div>
+        <h3>Using React Component with mapping</h3> 
+          <react-component name="HelloList" props="people">
       </div>
     </div><!-- /.container -->
     <script src="/assets/libraries/jquery/dist/jquery.min.js"></script>
